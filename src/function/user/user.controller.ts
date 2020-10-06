@@ -12,4 +12,11 @@ export class UserController {
   ){
       return this.userService.create(userDto);
   }
+
+  @Post('/login')
+  join(
+      @Body() userDto: userDto
+  ){
+      return this.userService.join(userDto);
+  }
 }

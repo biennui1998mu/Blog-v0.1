@@ -16,6 +16,10 @@ export const userSchema = new schema({
     required: true,
     select: false
   },
+  email: {
+    type: String,
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -23,8 +27,9 @@ export const userSchema = new schema({
 });
 
 export interface User extends mongoose.Document {
-  name?: string;
-  username?: string;
-  password?: string
+  name: string;
+  username: string;
+  password: string;
+  email: string;
   createdAt: string;
 }
